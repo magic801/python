@@ -30,5 +30,9 @@ class MouseClick:
         print('123123123')
 
 if __name__ == '__main__':
-    ob = MouseClick(1000,1000)
+    ob = MouseClick(878, 800)
     ob.startclick()
+
+    img1 = pyautogui.screenshot()
+    img1.save('first_shot.png')
+    # pyautogui.typewrite(message="hahah,", interval=0.5)
