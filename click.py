@@ -20,7 +20,7 @@ class MouseClick:
         self.y = y
 
     def startclick(self):
-        pyautogui.click(self.x, self.y, clicks=2, interval=0.0, button='left')
+        pyautogui.click(self.x, self.y, clicks=2, interval=0.0, button='right')
 
     def autoclick(self):
         m = PyMouse()
@@ -30,9 +30,9 @@ class MouseClick:
         print('123123123')
 
 if __name__ == '__main__':
-    ob = MouseClick(878, 800)
+    ob = MouseClick(400, 380)
     ob.startclick()
 
-    img1 = pyautogui.screenshot()
-    img1.save('first_shot.png')
+    #img1 = pyautogui.screenshot()
+    #img1.save('first_shot.png')
     # pyautogui.typewrite(message="hahah,", interval=0.5)
