@@ -1,6 +1,5 @@
 import re
 
-
 reg = '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
 
 def check_string(re_exp, str):
