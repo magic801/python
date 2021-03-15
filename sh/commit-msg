@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "commit-msg"
+
+
+msg=`awk -F:" " {print} $1`
+#partten="^[test|fix](\w+):\s+\w+"
+partten="(test|fix|feat|docs|refactor|style|improvement)\([a-zA-Z]+\): .*"
+
+if [[ $msg =~ $partten ]]
+then
+	echo 'commit success.'
+else
+	echo '按照以下格式提交：<类型>[作用域]: <描述>'
+	echo '<类型> fix、feat、docs、refactor、test、style、improvement'
+	echo '<作用域> 影响的文件名'
+	echo '<描述> 本次提的描述'
+	echo '如  fix(header): 修复顶导航样式问题'
+	exit 1
+fi
