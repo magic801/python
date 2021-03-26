@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "commit-msg"
+echo "commit-msg1"
 
 
 msg=`awk -F:" " {print} $1`
@@ -17,4 +17,4 @@ else
 	echo '<描述> 本次提的描述'
 	echo '如  fix(header): 修复顶导航样式问题'
 	exit 1
-fi
+fi 
